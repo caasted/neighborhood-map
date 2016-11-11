@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8">
+	<title>Neighborhood Map App</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div id="floating-panel">
+		<input onclick="clearMarkers();" type=button value="Hide Markers">
+		<input onclick="showMarkers();" type=button value="Show Markers">
+	</div>
+	<div class="map" id="map"></div>
+	<div class="news" id="news">
+		<h1>Related NY Times Articles</h1>
+		<p>Select a company to display articles</p>
+	</div>
+
+	<script src="js/libs/jquery-3.1.1.min.js"></script>
+	<script src="js/libs/knockout-3.4.1.js"></script>
+	<script src="js/script.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDlWiG-i_So8bBOGoYH_k6f-4_49S9zEXM&callback=initMap"></script>
+</body>
+</html>
