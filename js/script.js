@@ -34,6 +34,7 @@ var ViewModel = function () {
 
 	this.activateCo = function ( activeCo ) {
 		markers[ activeCo ].setAnimation( google.maps.Animation.BOUNCE );
+		map.setCenter(self.currentCo().position() );
 		infowindows[ activeCo ].setContent( content );
 		infowindows[ activeCo ].open(map, markers[ activeCo ]);
 		indeedQuery( self.currentCo().name() );

@@ -1,8 +1,8 @@
 var content = "<h4>Job Openings</h4>" +
-	"<div id='indJobContent' class=''></div>" +
+	"<div id='indJobContent' class=''></div><p>" +
 	"<a title='Job Search' href='http://www.indeed.com/'' " +
 	"target='_new'>jobs by <img alt=Indeed " +
-	"src='http://www.indeed.com/p/jobsearch.gif'></a>";
+	"src='http://www.indeed.com/p/jobsearch.gif'></a></p>";
 
 var indeedQuery = function( company ) {
 	self.ind_pub = '9275408024451565';
@@ -16,6 +16,11 @@ var indeedQuery = function( company ) {
 	self.ind_t = 40;
 	self.ind_c = 30;	
 	
-	$.getScript('http://www.indeed.com/ads/jobroll-widget-v3.js')
+	$.getScript('http://www.indeed.com/ads/jobroll-widget-v3.js', function() {
+	}).done( function( script, textStatus ) {
+		console.log( textStatus );
+	}).fail( function( jqxhr, settings, exception ) {
+		$( "div.indJobContent" ).text( "Could not connect to Indeed" );
+	});
 }
 
