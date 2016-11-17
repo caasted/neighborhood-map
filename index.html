@@ -4,29 +4,23 @@
 	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="UTF-8">
 	<title>Neighborhood Map App</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<div class="map" id="map"></div>
-	
 	<div class="container">
-		<div class="row">
-			<div class="col-md-3" id="nav">
-				<h2>Nearby Companies</h2>
-				<form>
-					<input type="text" placeholder="Filter">
-				</form>
-			</div>
-			<div class="col-md-9" id="indeed">
-				<h2>Job Listings on Indeed</h2>
-				<p>Select a company to display postings</p>
+		<div class="nav">
+			<div id="co-list" data-bind="foreach: coList">
+				<div data-bind="text: name, click: $parent.selectCo"></div>
 			</div>
 		</div>
+		<div class="map" id="map"></div>
 	</div>
 
 	<script src="js/libs/jquery-3.1.1.min.js"></script>
 	<script src="js/libs/knockout-3.4.1.js"></script>
+	<script src="js/companies.js"></script>
+	<script src="js/map.js"></script>
+	<script src="js/indeed.js"></script>
 	<script src="js/script.js"></script>
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDlWiG-i_So8bBOGoYH_k6f-4_49S9zEXM&callback=initMap"></script>
 </body>
