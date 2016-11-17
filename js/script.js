@@ -19,6 +19,8 @@ var ViewModel = function () {
 
 	this.filter = ko.observable("");
 
+	// The following filter function was adapted from 
+	// http://stackoverflow.com/questions/13664499/how-to-filter-using-a-dropdown-in-knockout
 	this.displayCoList = ko.computed(function() {
 		var filter = self.filter();
 		if (!filter || filter == "All") {
