@@ -29,83 +29,76 @@ var companies = [
 },
 {
 	id: 4, 
-	name: "IMVU", 
-	hidden: false, 
-	position: {lat: 37.4881747, lng: -122.2241184}, 
-	city: "Redwood City"
-},
-{
-	id: 5, 
 	name: "Intel", 
 	hidden: false, 
 	position: {lat: 37.3875909, lng: -121.9637869}, 
 	city: "Santa Clara"
 },
 {
-	id: 6, 
+	id: 5, 
 	name: "Jaunt", 
 	hidden: false, 
 	position: {lat: 37.4254853, lng: -122.1391887}, 
 	city: "Palo Alto"
 },
 {
-	id: 7, 
+	id: 6, 
 	name: "LeEco", 
 	hidden: false, 
 	position: {lat: 37.406266, lng: -121.943982}, 
 	city: "San Jose"
 },
 {
-	id: 8, 
+	id: 7, 
 	name: "Lytro", 
 	hidden: false, 
 	position: {lat: 37.4103268, lng: -122.0809964}, 
 	city: "Mountain View"
 },
 {
-	id: 9, 
+	id: 8, 
 	name: "Matterport", 
 	hidden: false, 
 	position: {lat: 37.4101478, lng: -122.0134699}, 
 	city: "Sunnyvale"
 },
 {
-	id: 10, 
+	id: 9, 
 	name: "NVIDIA", 
 	hidden: false, 
 	position: {lat: 37.3700138, lng: -121.9653308}, 
 	city: "Santa Clara"
 },
 {
-	id: 11, 
+	id: 10, 
 	name: "ON Semiconductor", 
 	hidden: false, 
 	position: {lat: 37.3772049, lng: -121.969802}, 
 	city: "Santa Clara"
 },
 {
-	id: 12, 
+	id: 11, 
 	name: "OSI Engineering, Inc.", 
 	hidden: false, 
 	position: {lat: 37.2877755, lng: -121.9351571}, 
 	city: "Campbell"
 },
 {
-	id: 13, 
+	id: 12, 
 	name: "Q Analysts LLC", 
 	hidden: false, 
 	position: {lat: 37.3217904, lng: -121.9780801}, 
 	city: "Santa Clara"
 },
 {
-	id: 14, 
+	id: 13, 
 	name: "Rambus", 
 	hidden: false, 
 	position: {lat: 37.4045474, lng: -122.0359705}, 
 	city: "Sunnyvale"
 },
 {
-	id: 15, 
+	id: 14, 
 	name: "zSpace, Inc.", 
 	hidden: false, 
 	position: {lat: 37.38359690000001, lng: -122.0065362}, 

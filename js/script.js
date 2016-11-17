@@ -34,9 +34,9 @@ var ViewModel = function () {
 
 	this.activateCo = function ( activeCo ) {
 		markers[ activeCo ].setAnimation( google.maps.Animation.BOUNCE );
-		infowindows[ activeCo ].setContent( contentStart + 
-			self.currentCo().name() + contentClose);
+		infowindows[ activeCo ].setContent( content );
 		infowindows[ activeCo ].open(map, markers[ activeCo ]);
+		indeedQuery( self.currentCo().name() );
 	}
 }
 
