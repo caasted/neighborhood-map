@@ -4,20 +4,34 @@
 	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="UTF-8">
 	<title>Neighborhood Map App</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<div class="container">
-		<div class="nav">
-			<h4>Filter by City</h4>
-			<div class="drop-down-menu">
-				<select data-bind="options: cities, value: filter"></select>
+		<!-- Collapsible navbar adapted from 
+		http://www.w3schools.com/bootstrap/bootstrap_navbar.asp -->
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<h4>Filter by City</h4>
+					<div class="drop-down-menu">
+						<select data-bind="options: cities, value: filter"></select>
+					</div>
+					<h4>Companies</h4>
+					<div id="co-list" data-bind="foreach: displayCoList">
+						<div data-bind="text: name, click: $parent.selectCo"></div>
+					</div>
+				</div>
 			</div>
-			<h4>Companies</h4>
-			<div id="co-list" data-bind="foreach: displayCoList">
-				<div data-bind="text: name, click: $parent.selectCo"></div>
-			</div>
-		</div>
+		</nav>
 		<div class="map" id="map">
 			<p>Could not load Google Maps data; 
 			please check your internet connection.</p>
@@ -26,6 +40,7 @@
 
 	<script src="js/libs/jquery-3.1.1.min.js"></script>
 	<script src="js/libs/knockout-3.4.1.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="js/companies.js"></script>
 	<script src="js/map.js"></script>
 	<script src="js/indeed.js"></script>
