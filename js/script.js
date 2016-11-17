@@ -15,6 +15,21 @@ var ViewModel = function () {
 		self.coList.push( new Company(coItem) );
 	});
 
+	this.cityList = ko.observableArray(cities);
+
+	this.filter = ko.observable("");
+
+	this.displayCoList = ko.computed(function() {
+		var filter = self.filter();
+		if (!filter || filter == "All") {
+			return self.coList();
+		} else {
+			return ko.utils.arrayFilter(self.coList(), function(company) {
+				return company.city() == filter;
+			});
+		}
+	});
+
 	this.currentCo = ko.observable( this.coList()[0] );
 
 	this.selectCo = function( selectedCo ) {

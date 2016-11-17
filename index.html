@@ -9,11 +9,17 @@
 <body>
 	<div class="container">
 		<div class="nav">
-			<div id="co-list" data-bind="foreach: coList">
+			<h4>Filter by City</h4>
+			<div class="drop-down-menu">
+				<select data-bind="options: cities, value: filter"></select>
+			</div>
+			<h4>Companies</h4>
+			<div id="co-list" data-bind="foreach: displayCoList">
 				<div data-bind="text: name, click: $parent.selectCo"></div>
 			</div>
 		</div>
-		<div class="map" id="map"><p>Could not load Google Maps data; 
+		<div class="map" id="map">
+			<p>Could not load Google Maps data; 
 			please check your internet connection.</p>
 		</div>
 	</div>

@@ -1,3 +1,15 @@
+var cities = [
+"All", 
+"Campbell", 
+"Menlo Park", 
+"Mountain View", 
+"Palo Alto", 
+"Redwood City", 
+"San Jose", 
+"Santa Clara", 
+"Sunnyvale"
+];
+
 var companies = [
 {
 	id: 0, 
@@ -9,7 +21,7 @@ var companies = [
 {
 	id: 1, 
 	name: "Facebook", 
-	hidden: false, 
+	hidden: true, 
 	position: {lat: 37.4846256, lng: -122.1478616}, 
 	city: "Menlo Park"
 },
