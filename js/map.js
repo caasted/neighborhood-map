@@ -2,7 +2,7 @@ var map;
 var markers = [];
 var infowindows = [];
 
-function initMap() {
+var initMap = function() {
 	map = new google.maps.Map( document.getElementById( 'map' ), {
 		zoom: 11,
 		center: {lat: 37.3860517, lng: -122.0838511}
@@ -37,3 +37,6 @@ function initMap() {
 	});
 }
 
+var googleMapError = function() {
+	alert("Google Maps has encountered an error and could not be loaded.");
+};

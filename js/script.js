@@ -16,7 +16,7 @@ var ViewModel = function () {
 
 	this.cityList = ko.observableArray(cities);
 
-	this.filter = ko.observable("");
+	this.filter = ko.observable('');
 
 	// The following filter function was adapted from 
 	// http://stackoverflow.com/questions/13664499/how-to-filter-using-a-dropdown-in-knockout
