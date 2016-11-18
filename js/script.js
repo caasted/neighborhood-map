@@ -1,7 +1,6 @@
 var Company = function (data) {
 	this.id = ko.observable(data.id);
 	this.name = ko.observable(data.name);
-	this.hidden = ko.observable(data.hidden);
 	this.position = ko.observable(data.position);
 	this.city = ko.observable(data.city);
 }
@@ -22,15 +21,32 @@ var ViewModel = function () {
 	// The following filter function was adapted from 
 	// http://stackoverflow.com/questions/13664499/how-to-filter-using-a-dropdown-in-knockout
 	this.displayCoList = ko.computed(function() {
-		var filter = self.filter();
-		if (!filter || filter == "All") {
+		if (!self.filter() || self.filter() == "All") {
 			return self.coList();
 		} else {
 			return ko.utils.arrayFilter(self.coList(), function(company) {
-				return company.city() == filter;
+				return company.city() == self.filter();
 			});
 		}
 	});
+
+	this.updateMarkers = ko.computed(function () {
+		if (!self.filter() || self.filter() == "All") {
+			markers.forEach( function (marker) {
+				marker.setVisible(true);
+			});
+		} else {
+			markers.forEach( function (marker) {
+				marker.setVisible(false);
+			});
+			self.deactivateAll();
+			self.coList().forEach( function( company ) {
+				if (company.city() == self.filter()) {
+					markers[ company.id() ].setVisible(true);
+				}
+			});
+		}
+	})
 
 	this.currentCo = ko.observable( this.coList()[0] );
 
