@@ -13,7 +13,7 @@ function initMap() {
 			position: company.position, 
 			map: map, 
 			title: company.name
-		})
+		});
 		markers.push( marker );
 
 		var infowindow = new google.maps.InfoWindow();
@@ -34,6 +34,6 @@ function initMap() {
 			infowindow.open(map, marker);
 			indeedQuery( company.name );
 		});
-	})
+	});
 }
 

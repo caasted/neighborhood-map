@@ -22,5 +22,5 @@ var indeedQuery = function( company ) {
 	}).fail( function( jqxhr, settings, exception ) {
 		$( "div.indJobContent" ).text( "Could not connect to Indeed" );
 	});
-}
+};
 

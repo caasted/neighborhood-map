@@ -3,7 +3,7 @@ var Company = function (data) {
 	this.name = ko.observable(data.name);
 	this.position = ko.observable(data.position);
 	this.city = ko.observable(data.city);
-}
+};
 
 var ViewModel = function () {
 	var self = this;
@@ -46,7 +46,7 @@ var ViewModel = function () {
 				}
 			});
 		}
-	})
+	});
 
 	this.currentCo = ko.observable( this.coList()[0] );
 
@@ -54,7 +54,7 @@ var ViewModel = function () {
 		self.currentCo(selectedCo);
 		self.deactivateAll();
 		self.activateCo( self.currentCo().id() );		
-	}
+	};
 
 	this.deactivateAll = function () {
 		markers.forEach( function(marker) {
@@ -63,7 +63,7 @@ var ViewModel = function () {
 		infowindows.forEach( function(infowindow) {
 			infowindow.close();
 		});
-	}
+	};
 
 	this.activateCo = function ( activeCo ) {
 		markers[ activeCo ].setAnimation( google.maps.Animation.BOUNCE );
@@ -71,7 +71,7 @@ var ViewModel = function () {
 		infowindows[ activeCo ].setContent( content );
 		infowindows[ activeCo ].open(map, markers[ activeCo ]);
 		indeedQuery( self.currentCo().name() );
-	}
-}
+	};
+};
 
-ko.applyBindings(new ViewModel())
+ko.applyBindings(new ViewModel());
