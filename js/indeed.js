@@ -14,13 +14,11 @@ var indeedQuery = function( company ) {
 	self.ind_n = 10;
 	self.ind_d = 'http://www.indeed.com';
 	self.ind_t = 40;
-	self.ind_c = 30;	
-	
+	self.ind_c = 30;
+
 	$.getScript('http://www.indeed.com/ads/jobroll-widget-v3.js', function() {
-	}).done( function( script, textStatus ) {
-		console.log( textStatus );
 	}).fail( function( jqxhr, settings, exception ) {
-		$( "div.indJobContent" ).text( "Could not connect to Indeed" );
+		alert("The Indeed API has encountered an error.");
 	});
 };
 

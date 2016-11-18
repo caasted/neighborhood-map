@@ -38,5 +38,5 @@ var initMap = function() {
 }
 
 var googleMapError = function() {
-	alert("Google Maps has encountered an error and could not be loaded.");
+	alert("The Google Maps API has encountered an error.");
 };
