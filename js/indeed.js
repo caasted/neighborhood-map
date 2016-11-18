@@ -1,8 +1,8 @@
-var content = "<h4>Job Openings</h4>" +
-	"<div id='indJobContent' class=''></div><p>" +
-	"<a title='Job Search' href='http://www.indeed.com/'' " +
-	"target='_new'>jobs by <img alt=Indeed " +
-	"src='http://www.indeed.com/p/jobsearch.gif'></a></p>";
+var content = '<h4>Job Openings</h4>' +
+	'<div id="indJobContent" class=""></div><p>' +
+	'<a title="Job Search" href="http://www.indeed.com/" ' +
+	'target="_new">jobs by <img alt=Indeed ' +
+	'src="http://www.indeed.com/p/jobsearch.gif"></a></p>';
 
 var indeedQuery = function( company ) {
 	self.ind_pub = '9275408024451565';
