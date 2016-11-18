@@ -28,7 +28,7 @@ function initMap() {
 			});
 
 			marker.setAnimation( google.maps.Animation.BOUNCE );
-			map.setCenter( company.position );
+			map.panTo( company.position );
 
 			infowindow.setContent( content );
 			infowindow.open(map, marker);
